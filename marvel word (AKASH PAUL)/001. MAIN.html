@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            position: relative;
+            background: url('https://wallpapercave.com/wp/wp5181422.jpg') no-repeat center center fixed;
+            background-size: cover; /* Set initial background image */
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 300px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], .try-again-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .try-again-btn {
+            margin-top: 10px;
+            background-color: #f44336;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: red;
+        }
+        #bgVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            display: none; /* Initially hide the video */
+        }
+        #bgVideoMain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            display: block; /* Display the background video by default */
+        }
+    </style>
+    <title>Responsive Login Page</title>
+</head>
+<body>
+    <!-- Main Background Video -->
+    <video id="bgVideoMain" autoplay muted loop>
+        <source src="wb.mp4" type="video/mp4"> <!-- New background video -->
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Video background for wrong password -->
+    <video id="bgVideo" autoplay muted loop>
+        <source src="wa3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <div class="message" id="message"></div>
+        <button class="try-again-btn" id="tryAgainBtn" style="display: none;">Try Again</button>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const message = document.getElementById('message');
+        const tryAgainBtn = document.getElementById('tryAgainBtn');
+        const bgVideo = document.getElementById('bgVideo');
+        const bgVideoMain = document.getElementById('bgVideoMain');
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'wakanda' && password === 'wakanda') {
+                // Keep the main video background
+                bgVideoMain.style.display = 'block'; // Show main background video
+                document.body.style.backgroundImage = 'none'; // Remove background image
+                message.textContent = 'Access Granted!';
+                message.style.color = 'green';
+                setTimeout(function() {
+                    window.location.href = 'sofara.html'; // Redirect to another webpage
+                }, 1500); // Delay of 1.5 seconds before redirecting
+            } else {
+                // Show the wrong password video
+                bgVideo.style.display = 'block';
+                message.textContent = 'Wrong Password!';
+                message.style.color = 'red';
+                tryAgainBtn.style.display = 'block'; // Show the "Try Again" button
+                bgVideoMain.style.display = 'none'; // Hide the main video
+            }
+        });
+
+        tryAgainBtn.addEventListener('click', function() {
+            // Reset the form and message
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            message.textContent = '';
+            tryAgainBtn.style.display = 'none'; // Hide the "Try Again" button
+            bgVideo.style.display = 'none'; // Hide the wrong password video
+            bgVideoMain.style.display = 'block'; // Show the main background video
+            document.body.style.backgroundImage = 'none'; // Remove the image background
+        });
+    </script>
+</body>
+</html>

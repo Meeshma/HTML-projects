@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style> 
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif; 
+        background-image: url('https://wallpapercat.com/w/middle-retina/0/6/b/476391-3840x2160-desktop-4k-benedict-cumberbatch-doctor-strange-wallpaper-photo.jpg');
+        background-size: cover;
+        background-position: center; 
+        background-attachment: fixed; /* Fixes the background image */
+        height: 100vh;
+        color: RED;
+    }
+    h1 {
+        text-align: center;
+        padding-top: 50px;
+        margin: 0;
+        font-size: 3em;
+        text-shadow: 5px 5px 5px #000000; /* Text shadow added */
+        transition: transform 0.3s ease-out; /* Transition for hover effect */
+       
+        will-change: transform, opacity; /* Optimize for transformation */
+    }
+    h1:hover {
+        transform: scale(1.1); /* Enlarge text by 20% on hover */
+        opacity: 0.999;
+    }
+    .description {
+        color: WHITE; /* White text color */
+        text-align: center;
+        margin: 20px auto;
+        width: 90%; /* Adjusted width for better alignment */
+        font-size: 1.6em;
+        text-shadow: 2px 2px 4px BLACK; /* Violet shadow */
+        transition: opacity 1s ease-out, transform 1s ease-out; /* Animation effect */
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    .description.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .movies-heading {
+        text-align: left;
+        margin: 50px 10%;
+        font-size: 2em;
+        color: red;
+        text-shadow: 2px 2px 4px #8A2BE2; /* Violet shadow */
+    }
+    .image-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 10%;
+    }
+    .image-box {
+        width: 200PX;
+        height: 300px; /* Example height for landscape container */
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        font-size: 1.2em;
+        text-shadow: 1px 1px 2px #000000; /* Text shadow */
+        border: 5px solid #FFFFFF; /* White margin around containers */
+        box-sizing: border-box; /* Ensure border is included in the element's total width and height */
+    }
+    .image-box img {
+        width: 130%;
+        height:100%;
+        object-fit: cover;
+    }
+    
+    /* Style for the iframe container */
+    .map-container {
+        width: 100%; /* Full width of the screen/container */
+        max-width: 700px; /* Limit max width for the map */
+        margin: 20px auto; /* Center it horizontally with some margin from top */
+        padding: 0px; /* Padding around the iframe */
+        background-color: #8A2BE2; /* Semi-transparent black background */
+        border: 5px  #8A2BE2; /* Black outline around the container */
+        border-radius: 10px; /* Optional: Round the corners */
+        box-sizing: border-box; /* Ensure padding and border are included in the total width/height */
+        display: flex;
+        justify-content: center; /* Center the iframe horizontally */
+    }
+
+    /* Style the iframe itself */
+    .map-container iframe {
+        width: 100%;
+        height: 400px; /* You can adjust this as needed */
+        border: none; /* Remove default iframe border */
+        border-radius: 8px; /* Optional: Round the corners of the iframe */
+    }
+    .YOUTUBE{
+     padding-top: 50px; /* Add 20px padding to the top */
+    padding-left: 30px; /
+     padding-right: 30px; 
+     padding-bottom:80PX;
+      
+    }
+    
+    
+    
+    .credits-container {
+    padding-left: 40px;  /* Left padding */
+    padding-right: 40px; /* Right padding */
+    text-align: center;  /* Center-align the text inside the container */
+    background-color: rgba(0, 0, 0, 0.7); /* Slight background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    padding-top:30PX ;
+    padding-bottom:30PX ;
+}
+.YOUTUBE{
+     padding-top: 50px; /* Add 20px padding to the top */
+    padding-left: 30px; /
+     padding-right: 30px; 
+     padding-bottom:80PX;
+      
+    }
+      
+    
+</style>
+<title>DOCTOR STRANGE</title>
+</head>
+<body>
+<h1>DOCTOR STRANGE</h1>
+<BR></BR>
+<BR></BR>
+<BR></BR>
+<p class="description" id="description"></B>Doctor Strange, also known as Dr. Stephen Strange, is a fictional superhero in the Marvel Comics universe created by writer Stan Lee and artist Steve Ditko. He made his first appearance in Strange Tales #110 in 1963. Originally a brilliant but arrogant neurosurgeon, Dr. Strange's life changed forever after a car accident damaged his hands, rendering him unable to perform surgery. Desperate for a cure, he sought out the Ancient One and eventually became the Sorcerer Supreme, mastering the mystical arts to protect the Earth from supernatural threats. With his powerful artifacts, such as the Eye of Agamotto and Cloak of Levitation, Doctor Strange is known for his wisdom, magical prowess, and dedication to safeguarding the multiverse.</p>
+
+<div class="movies-heading"> BEST MOVIES</div>
+<div class="image-container">
+    <div class="image-box">             
+        <img src="http://www.impawards.com/2016/posters/doctor_strange_ver11.jpg" alt="Image 1">
+    </div>
+<div class="image-box">             
+        <img src="https://m.media-amazon.com/images/I/91syHT466TL.jpg" alt="Image 1">
+    </div>
+    <div class="image-box"> 
+<img src="https://i.pinimg.com/736x/dd/61/1c/dd611c49cbf966afcdaf710c5a5646fa.jpg" alt="Image 1">
+</div>
+</div>
+<div class="movies-heading">ON MAP</div>
+<!-- Map container with   //img src="" alt="Image 1" //padding and black outline -->
+<div class="map-container">
+  <iframe width="560" height="315" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96622.91291142414!2d-73.99875413816723!3d40.817726292383675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f32eaaaaaaab%3A0xebf5e2ddec8023bc!2sAvenger!5e0!3m2!1sen!2sin!4v1738571149277!5m2!1sen!2sin" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<h1>TRIBUTE TO OUR HERO</h1>
+
+<div class="YOUTUBE">
+<iframe width="1280" height="600" src="https://www.youtube.com/embed/vrECB9Wj9RE?si=qoFfy4IF4X0tSPoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="credits-container">
+        <p>CREDITS: AKASH PAUL</p>
+    </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var description = document.getElementById('description');
+        setTimeout(function() {
+            description.classList.add('visible');
+        }, 500);
+    });
+</script>
+
+</body>
+</html>

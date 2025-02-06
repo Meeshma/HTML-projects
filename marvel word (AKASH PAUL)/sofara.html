@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video Example</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Optional background color for better visibility */
+        }
+        .letter-head-container {
+            width: 100%; /* This ensures the container takes up the full width of the page */
+            text-align: center; /* Center the text inside the container */
+            padding-top: 270px;
+        }
+        .letter-head-animation {
+            display: inline-block; /* To keep the text inline and allow the animation to work */
+            font-size: 4em;
+            color: white;
+            font-family: Arial, sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(30, end);
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .explore-link {
+            font-size: 20px; /* Medium size text */
+            color: #FFFFFF; /* White text color */
+            text-decoration: none; /* No underline */
+            display: inline-block;
+            padding: 10px;
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
+            margin-top: 20px; /* Space above the link */
+        }
+        .explore-link:hover {
+            color: #C4A8FF; /* Optional: Change color on hover */
+        }
+        .wa{
+        padding-top: 60px;
+        
+}
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="w.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="letter-head-container">
+        <div class="letter-head-animation">
+            <b>WELCOME TO MY WEBSITE</b>
+        </div>
+        <div class="wa">
+        <a href="WEBSITE.html" class="explore-link">click here to explore</a>
+    </div>
+    </div>
+</body>
+</html>
