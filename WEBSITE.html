@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      height: 3000px; /* Adjusted for additional content */
+      font-family: Arial, sans-serif;
+      background-color: #000000; /* pitch black background */
+      color: white; /* black text */
+    }
+
+    .title {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .hidden-line {
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 0px; /* space between lines */
+      font-weight: bold; /* bold text */
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px; /* padding around the container */
+      margin-top: 50px; /* space between text and containers */
+      margin-bottom: 50px; /* space below containers */
+    }
+
+    .container div {
+      width: 24%;
+      margin: 1%;
+      /* Removed the white background */
+      height: 150px; /* fixed height for containers, adjust as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px; /* space below each container */
+    }
+
+    .container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* ensure the image covers the container */
+    }
+
+    .video-background {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      text-align: center;
+    }
+  </style>
+  <title class="title">Scroll to Reveal Text</title>
+</head>
+<body>
+  <h1 style="font-size: 110px; padding-top: 200px; padding-bottom: 50px; text-align:center;"> HOLA !</h1>
+  <div class="hidden-line" id="line1">HERE YOU CAN EXPERIENCE THE IMMERSIBLE WAY TO THE WORLD OF MARVEL.</div>
+  <div class="hidden-line" id="line2">CLICK ON ANY ONE TO REDIRECT TO IT DIRECTLY, GET YOUR SEATS READY.</div>
+
+  <div class="container">
+         <div>
+              <a href="1.html" target="_blank">
+              <img src="https://wallpapers.com/images/hd/black-panther-landscape-uh3cee8tqn6q0s32.jpg" alt="Image 1">
+              </a>
+         </div>
+
+
+         <div>
+             <a href="2.html" target="_blank">
+             <img src="https://th.bing.com/th/id/OIP.AY6l3dHUFs8ur7ytAy_ebQHaEK?w=302&h=180&c=7&r=0&o=5&pid=1.7" alt="Image 2">
+             </a>
+         </div>
+
+
+         <div>
+             <a href="3.html" target="_blank">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKRFlVsoxOZ8L2RV3bHXUGUhXm4QS7BcO6VJIuufgnT1KxwGMC1Hyw8nmTy0HcriR2W9U&usqp=CAU"alt="Image 3">
+             </a>
+         </div>
+  </div>
+
+  <div class="container">
+            <div>
+                <a href="4.html" target="_blank">
+                <img src="https://wallpapers.com/images/featured/iron-man-superhero-ponky3hlfivddo2m.jpg" alt="Image 4">
+                </a>
+          </div>
+
+          <div>
+              <a href="5.html" target="_blank">
+              <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/783F99F37062DCE97ABDE66BA2FE84F1885382908D4B25F48E25B57021ECC256/scale?width=1200&aspectRatio=1.78&format=webp" alt="Image 5">
+              </a>
+          </div>
+         <div>
+
+              <a href="6.html" target="_blank">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWFqp44gyqYz5oOwQQprqRPZvBDDZnoBJjxBedVY_JwoHMbqHPgipi4A0iz2McyBlq0FI&usqp=CAU" alt="Image 6">
+              </a>
+        </div>
+ </div>
+
+  <div class="container">
+           <div>
+               <a href="7.html" target="_blank">
+               <img src="https://media.cnn.com/api/v1/images/stellar/prod/131108082143-thor-the-dark-world.jpg?q=x_112,y_0,h_1000,w_1777,c_crop/h_833,w_1480" alt="Image 7">
+               </a>
+           </div>
+          <div>
+               <a href="8.html" target="_blank">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmvpsQJdaJ_giKdlslQEvLfORXVK46d695t5uXMa68QePk4c1PQ8xUBLf9th7BnzKqM6I&usqp=CAU" alt="Image 8">
+               </a>
+         </div>
+         <div>
+               <a href="9.html" target="_blank">
+                <img src="https://www.looper.com/img/gallery/every-hulk-movie-ranked-from-worst-to-best/intro-1555712816.jpg" alt="Image 9">
+               </a>
+               </div>
+   </div>
+
+  <video autoplay muted loop class="video-background">
+    <source src="wa.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const lines = document.querySelectorAll('.hidden-line');
+      const scrollPosition = window.scrollY + window.innerHeight;
+
+      lines.forEach(line => {
+        if (scrollPosition > line.offsetTop) {
+          line.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
