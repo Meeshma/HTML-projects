@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image:url('https://images-platform.99static.com//nLgWk9kDV7svStT7X2uzGnfVvkE=/0x0:1000x1000/fit-in/500x500/99designs-contests-attachments/79/79596/attachment_79596552');
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .hidden {
+            display: none;
+        }
+        .links {
+            margin-top: 10px;
+        }
+        .links a {
+            text-decoration: none;
+            color: #007bff;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required><br><br>
+        <input type="password" id="password" placeholder="Password" required><br><br>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div class="container hidden" id="logoutContainer">
+        <h2>Welcome, <span id="user"></span>!</h2>
+        <button onclick="logout()">Logout</button>
+
+        <!-- Links to Zomato and Swiggy -->
+        <div class="links">
+            <a href="https://www.zomato.com" target="_blank">Visit Zomato</a>
+            <a href="https://www.swiggy.com" target="_blank">Visit Swiggy</a>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            if (username) {
+                document.getElementById("user").innerText = username;
+                document.getElementById("loginContainer").classList.add("hidden");
+                document.getElementById("logoutContainer").classList.remove("hidden");
+            } else {
+                alert("Please enter a username");
+            }
+        }
+        function logout() {
+            document.getElementById("loginContainer").classList.remove("hidden");
+            document.getElementById("logoutContainer").classList.add("hidden");
+        }
+    </script>
+</body>
+</html>
