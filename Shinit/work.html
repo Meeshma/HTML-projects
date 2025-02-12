@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Workout & Calisthenics</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        header {
+            position: relative;
+            background-image: url('https://thegravgear.com/cdn/shop/files/calisthenics-playbook-push-pull-squat_image-1_9-min.jpg?v=1707310401&width=1540');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: #fff;
+            text-align: center;
+            padding: 150px;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+
+        header * {
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        /* Main Content */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .exercises, .tips {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer; /* Show that the card is clickable */
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+
+        .tips {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        footer {
+            position: relative;
+            background-image: url('https://thegravgear.com/cdn/shop/files/calisthenics-playbook-push-pull-squat_image-1_2-min.jpg?v=1707310807&width=1540');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity value here */
+            z-index: 1;
+        }
+
+        footer * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Modal (Video Overlay) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .modal-content {
+            position: relative;
+            background: #fff;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        .modal video {
+            width: 100%;
+            height: 450px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Street Workout & Calisthenics</h1>
+        <p>Build strength, endurance, and body control with bodyweight exercises</p>
+    </header>
+
+    <div class="container">
+        <!-- Exercises Section -->
+        <div class="section">
+            <h2>Popular Calisthenics Exercises</h2>
+            <div class="exercises">
+                <div class="card" id="pullup-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0573/3122/0679/files/animated-illustration-of-high-pull-up_480x480.webp?v=1718440988" alt="Pull-up">
+                    <h3>Pull-up</h3>
+                    <p>One of the best upper body exercises to strengthen the back and biceps.</p>
+                </div>
+                <div class="card" id="pushup-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0258/2236/3744/files/build-muscles-by-doing-only-pushups_2021-11-12_2_600x600.jpg?v=1711721326" alt="Push-up">
+                    <h3>Push-up</h3>
+                    <p>Great for chest, shoulders, and triceps. Perfect for beginners to advanced levels.</p>
+                </div>
+                <div class="card" id="muscleup-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0573/3122/0679/files/animated-illustration-of-muscle-up_480x480.webp?v=1718440098" alt="Muscle-up">
+                    <h3>Muscle-up</h3>
+                    <p>Advanced movement combining a pull-up and dip, building incredible upper body strength.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="section">
+            <h2>Tips for Success in Street Workout</h2>
+            <div class="tips">
+                <div class="card">
+                    <h3>Start Slow</h3>
+                    <p>Begin with the basics like push-ups and squats, and progressively challenge yourself with advanced movements.</p>
+                </div>
+                <div class="card">
+                    <h3>Form is Key</h3>
+                    <p>Proper form helps prevent injury and ensures you're maximizing the benefits of each exercise.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for video content -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <video id="video" controls autoplay></video>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 Street Workout & Calisthenics By Shinit C K | All Rights Reserved &#xA9;</p>
+    </footer>
+
+    <script>
+        // Get the modal and close button
+        var modal = document.getElementById("videoModal");
+        var closeModal = document.getElementById("closeModal");
+        var video = document.getElementById("video");
+
+        // Open video modal for pull-up card
+        document.getElementById("pullup-card").addEventListener("click", function() {
+            video.src = "pullups.mp4"; // Replace with the path to your pull-up video file
+            modal.style.display = "flex";
+        });
+
+        // Open video modal for push-up card
+        document.getElementById("pushup-card").addEventListener("click", function() {
+            video.src = "pushup.mp4";
+            modal.style.display = "flex";
+        });
+
+        // Open video modal for muscle-up card
+        document.getElementById("muscleup-card").addEventListener("click", function() {
+            video.src = "muscleup.mp4"; // Replace with the path to your muscle-up video file
+            modal.style.display = "flex";
+        });
+
+        // Close the modal when the user clicks on the close button
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+            video.src = ""; // Stop the video when closing
+        }
+
+        // Close the modal when the user clicks anywhere outside the modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                video.src = ""; // Stop the video when closing
+            }
+        }
+    </script>
+
+</body>
+</html>
