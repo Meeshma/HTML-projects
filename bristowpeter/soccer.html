@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+ background-image: url('https://images.pexels.com/photos/1089450/pexels-photo-1089450.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');');
+ 
+            color: orange; /* Example color (tomato) */
+        
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: black 
+;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color:#390101;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #390100;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+    background-image: url('https://images.pexels.com/photos/8455340/pexels-photo-8455340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+     background-size: cover; /* Ensures the image covers the entire background */
+   padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-image: url('https://images.pexels.com/photos/6495062/pexels-photo-6495062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+   background-size: cover; /* Ensures the image covers the entire background */
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>soccer world</h1>
+  <p>A website created by anonymous.</p>
+</div>
+<div class="navbar">
+  <a href="https://onefootball.com/en/home">home</a>
+  <a href="https://www.pexels.com/search/videos/soccer/">video</a>
+  <a href="https://www.pexels.com/search/soccer/">picture</a>
+  <a href="https://www.espn.in/football/" class="right">other</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About soccer</h2>
+    <h5>footballing world:</h5>
+    <img src="https://www.fas.org.sg/wp-content/uploads/2024/12/PD-2024-12-12T000825.840.png" style="height:200px; width:100%;" alt="Soccer players">
+    <p>Some text about official team players</p>
+    <h3>More Text</h3>
+    <p>Team Management</p>
+ <img src=" https://images.mid-day.com/images/images/2022/dec/messicoverrr-a_d.jpg" style="height:200px; width:100%;" alt="messi">
+    <img src="https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg)/origin-imgresizer.eurosport.com/2016/11/08/1966031-41316107-2560-1440.jpg"style="height:200px; width:100%;" alt="ronaldo">
+  <img src="https://talksport.com/wp-content/uploads/sites/5/2016/08/brazil.jpg?w=620" style="height:200px; width:100%;" alt="neymar">
+  </div>
+  <div class="main">
+    <h2>LEGENDS</h2>
+    <h5>life history of Lionel Andres Messi, Jan 30, 2025</h5>
+    <img src="https://i.pinimg.com/736x/30/a1/fd/30a1fd8127b74d5e9c92697318a8ebbe.jpg" style="height:200px; width:100%;" alt="messi">
+    <p>His story..</p>
+    <p>Lionel Messi (born June 24, 1987, Rosario, Argentina) is an Argentine-born football (soccer) player who received a record-setting eight Ballon d’Or awards as the world’s top male player (2009–12, 2015, 2019, 2021, and 2023). In 2022 he helped Argentina win the Fédération Internationale de Football Association (FIFA)’s World Cup.
+
+Early life
+Messi started playing football as a boy and in 1995 joined the youth team of Newell’s Old Boys (a Rosario-based top-division football club). Messi’s phenomenal skills garnered the attention of prestigious clubs on both sides of the Atlantic. At age 13 Messi and his family relocated to Barcelona, and he began playing for FC Barcelona’s under-14 team. He scored 21 goals in 14 games for the junior team, and he quickly graduated through the higher-level teams until at age 16 he was given his informal debut with FC Barcelona in a friendly match.
+
+Club play
+In the 2004–05 season Messi, then 17, became the youngest official player and goal scorer in the Spanish La Liga (the country’s highest division of football). Though only 5 feet 7 inches (1.7 meters) tall and weighing 148 pounds (67 kg), he was strong, well-balanced, and versatile on the field. Naturally left-footed, quick, and precise in control of the ball, Messi was a keen pass distributor and could readily thread his way through packed defenses. In 2005 he was granted Spanish citizenship, an honor greeted with mixed feelings by the fiercely Catalan supporters of Barcelona. The next year Messi and Barcelona won the Champions League (the European club championship) title.</p>
+    <br>
+    <h2>CRISTIANO RONALDO</h2>
+    <h5>Title description, Jan 30, 2025</h5>
+     <img src="data:image/jpeg;base64,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"style="height:200px; width:100%;" alt="ronaldo">
+    <p>His story..</p>
+    <p>Cristiano Rinaldo: A Legend
+Cristiano was knocked down by his father’s comments and overwhelmed with memories of growing up with an alcoholic father who died when Cristiano was 20. He regretted they never really had a proper conversation, he explained, and that his father didn’t live long enough to see Cristiano rise to fame or share in the joy of his awards. “My father, he saw nothing. He died young. But it is what it is,” Cristiano said, wiping away tears.
+
+Arguably the greatest footballer on earth (his rivalry with Lionel Messi is the stuff of legend), Cristiano still wonders if his success was due to his father watching over him from heaven. While his home life was far from perfect, it was José Dinis Aveiro who introduced Cristiano to football - known as soccer in America - and guided him to become the man he is today. Cristiano Ronaldo is not just competitive and driven, but also anxious to improve the world for the sake of his six children and those he touches through his work with Save the Children and other charities.
+
+
+</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
